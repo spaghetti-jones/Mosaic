@@ -19,7 +19,7 @@ class LetterTile extends JPanel implements MouseListener {
     private int colorR2;
     private int colorG2;
     private int colorB2;
-    private String letter;
+    private String letterChosen;
     private int shapeSelection;
     private String shapeString;
 
@@ -48,7 +48,7 @@ class LetterTile extends JPanel implements MouseListener {
         shapeSelection = gen.nextInt(2);
         for (int i = 0; i < 1; i++) {
             String letterOption = "abcdefghijklmnopqrstuvwxyz";
-            letter = Character.toString(letterOption.charAt(GetNumberBetween(0,25)));
+            letterChosen = Character.toString(letterOption.charAt(GetNumberBetween(0,25)));
         }
 
 		if (shapeSelection == 1) {
@@ -78,7 +78,7 @@ class LetterTile extends JPanel implements MouseListener {
         g.setFont(new Font("Monospaced", Font.PLAIN, fontSize));
 
         g.setColor(new Color(colorR2,colorG2,colorB2));
-        g.drawString(letter,windowWidth/2-10,windowHeight/2+20);
+        g.drawString(letterChosen,windowWidth/2-10,windowHeight/2+20);
     }
 
     public String toStringShape() {
@@ -86,7 +86,7 @@ class LetterTile extends JPanel implements MouseListener {
     }
 
     public String toStringLetter() {
-        return String.format("\nDrawn letter = %s", letter);
+        return String.format("\nDrawn letter = %s", letterChosen);
     }
 
     public String toStringColor() {
