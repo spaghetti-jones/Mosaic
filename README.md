@@ -10,12 +10,14 @@ Assignment: Mosaic
 Contact: luisbarrera@lewisu.edu
 
 HOW TO COMPILE AND RUN:
+
 javac *.java
 
 java Mosaic
 
 
 TO LOOK AT THE CODE:
+
 code ./Mosaic.java
 
 code ./MosaicFrame.java
